@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code::Cubes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #212121;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.5em;
+            animation: fadeIn 1s;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+            background-color: #212121;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #2a2a2a;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            animation: slideIn 1s forwards;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #333;
+            padding: 25px;
+            border-radius: 8px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #212121;
+            color: #ffffff;
+            margin-top: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .download-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .download-section a {
+            color: #fff;
+            background-color: #212121;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .download-section a:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Code::Cubes</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="download.html">Download</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>Welcome to Code::Cubes</h2>
+            <p>Your next-gen code editor with dark mode and high customization for an enhanced coding experience.</p>
+            <p>Start writing clean, fast, and efficient code with our intuitive interface designed for developers by developers.</p>
+        </section>
+
+        <!-- Image of the IDE -->
+        <section class="image-container">
+            <img src="image.png" alt="Code::Cubes IDE Screenshot">
+        </section>
+
+        <section class="feature-cards">
+            <div class="feature-card">
+                <h3>Dark Mode</h3>
+                <p>Stay focused with a clean, distraction-free interface. Perfect for long coding sessions.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Syntax Highlighting</h3>
+                <p>Support for all major programming languages with dynamic syntax highlighting to improve code readability.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Code Completion</h3>
+                <p>Get intelligent code completion suggestions that help you write code faster and with fewer mistakes.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Multi-language Support</h3>
+                <p>Code::Cubes supports a wide range of programming languages, allowing seamless coding across various projects.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Built-in Debugger</h3>
+                <p>Efficiently troubleshoot your code with our advanced built-in debugger, offering step-by-step code execution.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Themes</h3>
+                <p>Customize the look and feel of your editor with themes and color schemes that suit your personal preference.</p>
+            </div>
+        </section>
+
+        <section class="download-section" id="download">
+            <h2>Download Code::Cubes</h2>
+            <p>Ready to try Code::Cubes? Download the latest version and start coding with ease!</p>
+            <a href="download.html">Download Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Code::Cubes. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
